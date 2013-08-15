@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>User Skills and Levels</h1>
+
+  <%# TODO: display the skills and proficiency levels for each user ... %>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Skill</th>
+      <th>Years</th>
+      <th>Formal?</th>
+    </thead>
+    <% @users.each do |user| %>
+      <% user.nameskills.each do |nameskill| %>
+    <tr>
+      <td><%=user.name%></td>
+      <td><%=nameskill.skill.name%> <%=nameskill.skill.context%></td>
+      <td><%=nameskill.years_experience%></td>
+      <td><%=nameskill.formal%></td>
+    </tr>
+      <% end %>
+    <% end %>
+
+  </table>
+
+</div>
