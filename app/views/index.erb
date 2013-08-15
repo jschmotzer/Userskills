@@ -3,21 +3,21 @@
 
   <%# TODO: display the skills and proficiency levels for each user ... %>
   <table>
-    <thead>
+    <tr>
       <th>Name</th>
       <th>Skill</th>
       <th>Years</th>
       <th>Formal?</th>
-    </thead>
+    </tr>
     <% @users.each do |user| %>
-      <% user.nameskills.each do |nameskill| %>
     <tr>
+      <% user.nameskills.each do |nameskill| %>
       <td><%=user.name%></td>
       <td><%=nameskill.skill.name%> <%=nameskill.skill.context%></td>
       <td><%=nameskill.years_experience%></td>
       <td><%=nameskill.formal%></td>
-    </tr>
       <% end %>
+    </tr>
     <% end %>
 
   </table>

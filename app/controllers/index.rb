@@ -2,13 +2,13 @@
 get '/' do
   # render home page
   @users = User.all
-
+  puts @users
   erb :index
 end
 
 get '/skills/new' do
   @user = User.find(session[:user_id])
-
+  
   erb :new
 end
 
